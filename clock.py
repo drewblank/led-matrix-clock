@@ -33,7 +33,7 @@ matrix = RGBMatrix(options = options)
 
 def get_nyt():
     #get article information from nyt top articles api 
-    nyt_appid = 'S4qYYSGVDYULxF4K5stCjqeU2RNoCSx1'
+    nyt_appid = ''
 
     response = requests.get('https://api.nytimes.com/svc/topstories/v2/home.json?api-key='+nyt_appid)
     nyt_data = json.loads(response.text)
@@ -44,7 +44,7 @@ def get_nyt():
 
 def get_weather():
     #get weather from openweather api 
-    appid = '96e2c37926cbacab77447f68548c6465'
+    appid = ''
     location = '4926563' #South Bend, IN
     response = requests.get('http://api.openweathermap.org/data/2.5/weather?id='+location+'&mode=json&cnt=10&appid='+appid)
     data = json.loads(response.text)
